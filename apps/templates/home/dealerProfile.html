@@ -22,24 +22,16 @@
     
     
   </head>
-  <body>
+  <body>        
+
     <div class="wrapper">
       {% include 'includes/navigation.html' %} 
       {% include'includes/sidebar1.html' %}
 
       <div class="main-panel"> 
-        <div style="margin: 4rem 0rem 5rem 6rem; height: 4rem; padding: 2.8rem;"><h1 style="font-weight: bold; font: 'Lato'; font-size: 4em;">Krishi Charcha</h1></div>
-        <div class="row" style="padding-left: 6rem;">
-            <div class="col-md-6" style="max-width: max-content;">
-                <img src="/static/assets/blog_comp_list.svg" alt="Blog card__header"/> 
-                <img src="/static/assets/blog_comp_list.svg" alt="Blog card__header"/> 
-                <img src="/static/assets/blog_comp_list.svg" alt="Blog card__header"/> 
-      </div>
-      <div class="col-md-4" style="width: max-content; max-width: 2rem;">
-        <img style="max-width: 50rem;" src="/static/assets/news_article.svg" alt="new and articles"/> 
-      </div>
-    </div>
-      </div>
+        
+        
+        
       </div>
 
     {% include 'includes/scripts.html' %}
@@ -48,3 +40,44 @@
     </script>
   </body>
 </html>
+
+
+<!-- commit 1be640f872641cab0285391ac2b8dc4438175cdc
+Author: Kalyani Kolte <87369826+krsnoki@users.noreply.github.com>
+Date:   Wed Dec 20 06:04:58 2023 +0530
+
+    Delete apps/home directory
+    
+    unnecessary route and home folder deleted
+
+diff --git a/apps/home/__init__.py b/apps/home/__init__.py
+deleted file mode 100644
+index dec76db..0000000
+--- a/apps/home/__init__.py
++++ /dev/null
+@@ -1,12 +0,0 @@
+-# -*- encoding: utf-8 -*-
+-"""
+-Copyright (c) 2019 - present AppSeed.us
+-"""
+-
+-from flask import Blueprint
+-
+-blueprint = Blueprint(
+-    'home_blueprint',
+-    __name__,
+-    url_prefix=''
+-)
+diff --git a/apps/home/routes.py b/apps/home/routes.py
+deleted file mode 100644
+index c1f3e8d..0000000
+--- a/apps/home/routes.py
++++ /dev/null
+@@ -1,106 +0,0 @@
+-
+-from apps.home import blueprint
+-from flask import render_template, request, jsonify
+-from flask_login import login_required
+-from jinja2 import TemplateNotFound
+-
+: -->

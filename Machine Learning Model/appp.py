@@ -19,21 +19,21 @@ def index():
 
 @app.route("/predict",methods=['POST'])
 def predict():
-    # N = requests.json.get('Nitrogen')
-    # P = requests.json.get('Phosporus')
-    # K = requests.json.get('Potassium')
-    # temp = requests.json.get('Temperature')
-    # humidity = requests.json.get('Humidity')
-    # ph = requests.json.get('Ph')
-    # rainfall = requests.json.get('Rainfall')
+    N = requests.json.get('Nitrogen')
+    P = requests.json.get('Phosporus')
+    K = requests.json.get('Potassium')
+    temp = requests.json.get('Temperature')
+    humidity = requests.json.get('Humidity')
+    ph = requests.json.get('Ph')
+    rainfall = requests.json.get('Rainfall')
 
-    N = request.form['Nitrogen']
-    P = request.form['Phosporus']
-    K = request.form['Potassium']
-    temp = request.form['Temperature']
-    humidity = request.form['Humidity']
-    ph = request.form['Ph']
-    rainfall = request.form['Rainfall']
+    # N = request.form['Nitrogen']
+    # P = request.form['Phosporus']
+    # K = request.form['Potassium']
+    # temp = request.form['Temperature']
+    # humidity = request.form['Humidity']
+    # ph = request.form['Ph']
+    # rainfall = request.form['Rainfall']
 
     feature_list = [N, P, K, temp, humidity, ph, rainfall]
     single_pred = np.array(feature_list).reshape(1, -1)

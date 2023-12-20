@@ -20,15 +20,69 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="/static/assets/css/demo.css" />
+    <style>
+      .section{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        background-color: rgb(238, 234, 234);
+        border-radius: 10px;
+        height: 85vh;
+        width: 25vw;
+        padding: 1.3rem 2.3rem 0 2.3rem;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
       {% include 'includes/navigation.html' %} 
       {% include'includes/sidebar1.html' %}
 
-      <div class="main-panel">
+      <div class="main-panel" style="padding-top: 3rem;">
         <div class="content">
-          
+          <div class="section" >
+            <form action="/predict" method="post" >
+                <div><p style="font-weight: bold;">Please Enter Following information: </p></div>
+                <div class="form-group">
+  <label for="Nitrogen">Nitrogen:</label>
+  <input type="text" class="form-control" required>
+
+            </div>
+            <div class="form-group">
+              <label for="Phosporus">Phosporus:</label>
+              <input type="text" class="form-control" required>
+           
+            </div>
+            <div class="form-group">
+              <label for="Potassium">Potassium:</label>
+              <input type="text" class="form-control" required>
+           
+            </div>
+            <div class="form-group">
+              <label for="Temperature">Temperature:</label>
+              <input type="text" class="form-control" required>
+           
+            </div>
+            <div class="form-group">
+              <label for="Humidity">Humidity:</label>
+              <input type="text" class="form-control" required>
+           
+            </div>
+            <div class="form-group">
+              <label for="PH">PH:</label>
+              <input type="email" class="form-control">
+           
+            </div>
+            <div class="form-group">
+              <label for="Rainfall">Rainfall:</label>
+              <input type="email" class="form-control">
+           
+            </div>
+
+
+            <!-- Button -->
+            <button class="btn btn-success" style="width: 10rem; margin-left: 7.2rem;">Predict</button>
+            </form>
+          </div>
       </div>
     </div>
 
