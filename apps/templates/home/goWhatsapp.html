@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Krishi Mitra</title>
+
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link rel="icon" href="/static/assets/img/icon.ico" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="/static/assets/js/plugin/webfont/webfont.min.js"></script>
+   
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/atlantis.min.css" />
+
+    <style>
+        :root{
+            --white: #fff;
+        }
+        body,
+html {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100%;
+  background: #222;
+}
+
+.float-button-wrapper {
+    position: fixed;
+    z-index: 20;
+    right: 30px;
+    bottom: 30px;
+}
+
+.pulse {
+    box-shadow: 0 0 0 rgba(92,168,44, 0.4);
+    animation: pulse 2s infinite;
+}
+
+img.float-button {
+    width: 60px;
+}
+
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(92,168,44, 0.5);
+    box-shadow: 0 0 0 0 rgba(92,168,44, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(92,168,44, 0);
+      box-shadow: 0 0 0 30px rgba(92,168,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(92,168,44, 0);
+      box-shadow: 0 0 0 0 rgba(92,168,44, 0);
+  }
+}
+
+.rounded-circle {
+    border-radius: 50%!important;
+}
+.text-center {
+  text-align: center;
+}
+.heading {
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+}
+.main-heading p {
+  font-size: 30px;
+  color: #433D3D;
+}
+.main-heading p span {
+  color: #B39970;
+}
+.position-absolute {
+  position: absolute;
+}
+.w-100 {
+  width: 100%;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      {% include 'includes/navigation.html' %} 
+      {% include'includes/sidebar1.html' %}
+
+      <div class="main-panel">
+        <div class="content">
+            <h1 class="position-absolute w-100 text-center heading">
+                Team Abhigya's Krishi Bot
+              </h1>
+            <div class="float-button-wrapper rounded-circle pulse">
+                <div class="box-shadow rounded-circle">
+                    <a href="https://wa.me/5550463853" target="_blank" aria-label="whatsapp" rel="noreferrer noopener">
+                        <img class="float-button" src="https://image.ibb.co/jxU6f9/whatsapp.png" alt="whatsapp">
+                    </a>
+                </div>
+            </div>
+              
+      </div>
+    </div>
+
+    {% include 'includes/scripts.html' %}
+    <script>
+     
+    </script>
+  </body>
+</html>
