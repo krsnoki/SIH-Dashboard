@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+</head>
+<body>
+    <h1>Crop Prediction</h1>
+    
+    <form action="/predict" method="post">
+        <label for="Nitrogen">Nitrogen:</label>
+        <input type="text" name="Nitrogen" required><br>
+
+        <label for="Phosporus">Phosporus:</label>
+        <input type="text" name="Phosporus" required><br>
+
+        <label for="Potassium">Potassium:</label>
+        <input type="text" name="Potassium" required><br>
+
+        <label for="Temperature">Temperature:</label>
+        <input type="text" name="Temperature" required><br>
+
+        <label for="Humidity">Humidity:</label>
+        <input type="text" name="Humidity" required><br>
+
+        <label for="Ph">Ph:</label>
+        <input type="text" name="Ph" required><br>
+
+        <label for="Rainfall">Rainfall:</label>
+        <input type="text" name="Rainfall" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
